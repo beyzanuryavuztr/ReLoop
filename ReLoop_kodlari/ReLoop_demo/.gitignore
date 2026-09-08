@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Sanal ortam (başlatıcı çalışınca oluşur; makineye özel — paylaşılmaz)
+.venv/
+backend/.venv/
+
+# Veritabanı / ortam (yerel; prod'da Postgres)
+*.db
+*.sqlite3
+.env
+
+# Üretilen / geçici
+dashboard.html
+
+# Yedekler (rapor dönemi artıkları)
+*.bak.py
+*.bak_atikkodu
+
+# Rapor/demo dönemi üretilen görseller (sistem çalışması için gerekli değil; figures.py yeniden üretir)
+figures/
+screenshots/
+
+# NOT: backend/vendor/ (TF.js + MobileNet) BİLİNÇLİ olarak izlenir —
+# Görüntü Zekâsı'nın offline çalışması için gerekli (CDN yok).

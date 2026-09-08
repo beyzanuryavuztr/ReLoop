@@ -1,0 +1,34 @@
+# Docker build context = ReLoop_demo/ (bkz. backend/docker-compose.yml). İmaja
+# yalnız Dockerfile'ın açıkça COPY'ledikleri girer; burada context transferini
+# küçültüp sızıntıyı önlüyoruz.
+
+# Sürüm kontrolü / IDE
+.git/
+.gitignore
+.github/
+
+# Python artıkları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Sanal ortamlar (başlatıcı üretir; makineye özel)
+.venv/
+backend/.venv/
+
+# Yerel veritabanı + sırlar (prod = Postgres, ortam değişkeniyle)
+*.db
+*.sqlite3
+.env
+backend/.env
+
+# Rapor/demo dönemi üretilenler (çalışma zamanı için gereksiz)
+figures/
+screenshots/
+dashboard.html
+_sunum_build/
+
+# Testler / geliştirme
+backend/tests/
+backend/requirements-dev.txt

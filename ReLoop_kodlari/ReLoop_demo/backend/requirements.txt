@@ -1,0 +1,14 @@
+# ReLoop backend — YEREL/DEMO çalışması (SQLite, sıfır kurulum).
+# Bu liste bilerek YALINDIR: hepsinin macOS/Windows/Linux için hazır "wheel"i
+# vardır → derleme gerekmez, kurulum patlamaz. (PostgreSQL sürücüsü psycopg BURADA
+# YOK; demo SQLite ile çalışır. Postgres için: requirements-postgres.txt.)
+fastapi>=0.111
+uvicorn>=0.30              # saf-Python sunucu; opsiyonel derlenen ekler (uvloop vb.) yok
+SQLAlchemy>=2.0
+alembic>=1.13
+pydantic>=2.7
+pydantic-settings>=2.2
+python-multipart>=0.0.9   # dosya/foto yükleme (teslim doğrulama)
+reportlab>=4.0            # GRS menşe / karbon sertifikası PDF
+qrcode[pil]>=7.4          # parti QR üretimi
+numpy>=1.26              # hedonik fiyat modeli (OLS)

@@ -1,0 +1,35 @@
+# ReLoop backend — PostgreSQL + FastAPI (prod benzeri).
+# Çalıştır:  docker compose up --build
+# Swagger:   http://localhost:8000/docs
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: reloop
+      POSTGRES_PASSWORD: reloop
+      POSTGRES_DB: reloop
+    ports:
+      - "5432:5432"
+    volumes:
+      - reloop_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reloop"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: ..                 # ReLoop_demo/ — motor çekirdeği de bağlama girer
+      dockerfile: backend/Dockerfile
+    environment:
+      RELOOP_DATABASE_URL: postgresql+psycopg://reloop:reloop@db:5432/reloop
+      RELOOP_ENGINE_DIR: /srv
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  reloop_pg:

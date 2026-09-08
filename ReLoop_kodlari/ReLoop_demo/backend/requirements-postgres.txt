@@ -1,0 +1,4 @@
+# PROD / PostgreSQL kurulumu = yalın liste + Postgres sürücüsü.
+# Docker imajı ve docker-compose bunu kullanır. Yerel demo için GEREKMEZ.
+-r requirements.txt
+psycopg[binary]>=3.1       # PostgreSQL sürücüsü (prod; RELOOP_DATABASE_URL=postgresql+psycopg://...)

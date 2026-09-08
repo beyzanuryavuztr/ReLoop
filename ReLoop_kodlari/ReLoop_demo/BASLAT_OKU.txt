@@ -1,0 +1,57 @@
+========================================================================
+  ReLoop — NASIL AÇILIR   (komut yazmak YOK, sadece çift tıkla)
+========================================================================
+
+Uygulamanın "canlı" özellikleri (Optimizasyon, Fiyat, Etki, Menşe & Güven,
+Görüntü Zekâsı) küçük bir yerel sunucu (backend) ile çalışır. Aşağıdaki
+başlatıcı bu sunucuyu SİZİN YERİNİZE kurup çalıştırır ve arayüzü açar.
+İnternetten paket iner, kod DIŞARIYA hiçbir şey göndermez; her şey kendi
+bilgisayarınızda, http://127.0.0.1 üzerinde çalışır.
+
+
+────────────────────────────────────────────────────────────────────────
+  MAC (macOS)
+────────────────────────────────────────────────────────────────────────
+1) Bu klasördeki   baslat_mac.command   dosyasına ÇİFT TIKLAYIN.
+
+2) İlk açılışta macOS "geliştirici doğrulanamadığı için açılamıyor" derse:
+   → Dosyaya SAĞ TIKLAYIN → "Aç" → çıkan uyarıda tekrar "Aç".
+   (Bunu sadece BİR KEZ yaparsınız; sonraki açılışlar çift tıkla olur.)
+
+3) Bir Terminal penceresi açılır ve otomatik çalışır. İLK açılışta kurulum
+   yapar (~1-2 dakika, internet gerekir). Bitince tarayıcıda arayüz açılır:
+        http://127.0.0.1:8000/app
+
+4) KAPATMAK için: o Terminal penceresinde Ctrl+C yapın ya da pencereyi kapatın.
+
+
+────────────────────────────────────────────────────────────────────────
+  WINDOWS
+────────────────────────────────────────────────────────────────────────
+1) Bu klasördeki   baslat_windows.bat   dosyasına ÇİFT TIKLAYIN.
+   (Python kurulu değilse: https://www.python.org/downloads/ — kurulumda
+    "Add Python to PATH" kutusunu işaretleyin.)
+2) İlk açılış kurulumu yapar; sonra tarayıcıda  http://127.0.0.1:8000/app  açılır.
+3) Kapatmak için açılan siyah pencereyi kapatın.
+
+
+────────────────────────────────────────────────────────────────────────
+  SIK SORULANLAR
+────────────────────────────────────────────────────────────────────────
+• "Backend'e bağlanın" yazısı görüyorum:
+  Başlatıcı çalışmıyor demektir. Arayüzü doğrudan HTML'e çift tıklayarak
+  değil, YUKARIDAKİ başlatıcıyla http://127.0.0.1:8000/app adresinden açın.
+  (Çevrimdışı 7 sekme HTML'e çift tıklayınca da çalışır; ama canlı 5 sekme
+   ve Görüntü Zekâsı için başlatıcı gerekir.)
+
+• "python3 bulunamadı" (Mac):
+  https://www.python.org/downloads/ adresinden Python 3'ü kurun, sonra
+  baslat_mac.command dosyasını yeniden çift tıklayın.
+
+• 8000 portu dolu:
+  Başlatıcı otomatik olarak 8001/8002... dener; Terminal'de yazan adresi açın.
+
+• İleri düzey (isteğe bağlı): Docker kurulu bir makinede
+      cd backend && docker compose up --build
+  aynı sistemi PostgreSQL ile ayağa kaldırır.
+========================================================================
