@@ -25,3 +25,4 @@ screenshots/
 
 # NOT: backend/vendor/ (TF.js + MobileNet) BİLİNÇLİ olarak izlenir —
 # Görüntü Zekâsı'nın offline çalışması için gerekli (CDN yok).
+DEVAM.md

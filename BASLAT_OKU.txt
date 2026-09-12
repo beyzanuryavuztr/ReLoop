@@ -24,6 +24,10 @@ bilgisayarınızda, http://127.0.0.1 üzerinde çalışır.
 
 4) KAPATMAK için: o Terminal penceresinde Ctrl+C yapın ya da pencereyi kapatın.
 
+5) Çift tıklayınca hiçbir şey olmuyorsa: Terminal'de bu klasöre gelip
+   şunu yazın:  chmod +x baslat_mac.command
+   Sonra tekrar çift tıklayın.
+
 
 ────────────────────────────────────────────────────────────────────────
   WINDOWS
@@ -32,7 +36,9 @@ bilgisayarınızda, http://127.0.0.1 üzerinde çalışır.
    (Python kurulu değilse: https://www.python.org/downloads/ — kurulumda
     "Add Python to PATH" kutusunu işaretleyin.)
 2) İlk açılış kurulumu yapar; sonra tarayıcıda  http://127.0.0.1:8000/app  açılır.
-3) Kapatmak için açılan siyah pencereyi kapatın.
+3) "Windows PC'nizi korudu" diye bir uyarı çıkarsa:
+   "Diğer bilgiler" yazısına tıklayın, sonra "Yine de çalıştır" butonuna basın.
+
 
 
 ────────────────────────────────────────────────────────────────────────
